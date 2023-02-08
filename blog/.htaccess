@@ -1,0 +1,12 @@
+#Kodlarımı aktif etmek için kullanılır
+RewriteEngine On
+
+#PHP uzantısını kaldırma kodları
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+
+RewriteRule ^anasayfa$ index.php [QSA,L]
+
+
+
